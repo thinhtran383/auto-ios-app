@@ -4,7 +4,7 @@ import SwiftUI
 struct BoxAutomationApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ResetNetworkView()
         }
     }
 }

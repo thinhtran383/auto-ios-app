@@ -1,4 +1,4 @@
-name: BoxAutomation
+name: BoxAutomationApp1
 options:
   deploymentTarget:
     iOS: "14.0"
@@ -6,19 +6,26 @@ settings:
   base:
     SWIFT_VERSION: 5.0
 targets:
-  BoxAutomation:
+  BoxAutomationApp1:
     type: application
     platform: iOS
     sources:
       - path: Sources
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.example.boxautomation
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.boxautomation.app1
         CODE_SIGN_STYLE: Manual
         CODE_SIGNING_ALLOWED: NO
         GENERATE_INFOPLIST_FILE: YES
-        INFOPLIST_KEY_CFBundleDisplayName: BoxAutomation
+        INFOPLIST_KEY_CFBundleDisplayName: "BoxAutomation App 1"
         INFOPLIST_KEY_LSRequiresIPhoneOS: YES
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_NSAppTransportSecurity: YES
+        INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsArbitraryLoads: YES
+        INFOPLIST_KEY_UIRequiredDeviceCapabilities: ["armv7"]
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: ["UIInterfaceOrientationPortrait", "UIInterfaceOrientationLandscapeLeft", "UIInterfaceOrientationLandscapeRight"]
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: ["UIInterfaceOrientationPortrait", "UIInterfaceOrientationPortraitUpsideDown", "UIInterfaceOrientationLandscapeLeft", "UIInterfaceOrientationLandscapeRight"]
+        INFOPLIST_KEY_UIStatusBarStyle: UIStatusBarStyleDefault
+        INFOPLIST_KEY_UIViewControllerBasedStatusBarAppearance: NO
         MARKETING_VERSION: 1.0
         CURRENT_PROJECT_VERSION: 1
