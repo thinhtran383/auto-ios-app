@@ -18,11 +18,23 @@ jobs:
         with:
           xcode-version: '15.4'
 
+      - name: Brew update
+        run: brew update
+
       - name: Install XcodeGen
         run: brew install xcodegen
 
       - name: Generate Xcode project
         run: xcodegen generate
+
+      - name: Downgrade project format for Xcode 15
+        run: |
+          set -e
+          PBX="BoxAutomation.xcodeproj/project.pbxproj"
+          echo "Before:"; grep -E 'objectVersion|compatibilityVersion' -m 2 "$PBX" || true
+          /usr/bin/sed -i '' -E 's/objectVersion = [0-9]+;/objectVersion = 60;/g' "$PBX"
+          /usr/bin/sed -i '' -E 's/compatibilityVersion = "Xcode [0-9.]+"/compatibilityVersion = "Xcode 15.0"/g' "$PBX"
+          echo "After:"; grep -E 'objectVersion|compatibilityVersion' -m 2 "$PBX" || true
 
       - name: Show Xcode version
         run: xcodebuild -version
