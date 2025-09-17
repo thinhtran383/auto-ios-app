@@ -16,3 +16,9 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.example.boxautomation
         CODE_SIGN_STYLE: Manual
         CODE_SIGNING_ALLOWED: NO
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: BoxAutomation
+        INFOPLIST_KEY_LSRequiresIPhoneOS: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        MARKETING_VERSION: 1.0
+        CURRENT_PROJECT_VERSION: 1
