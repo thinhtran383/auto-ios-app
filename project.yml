@@ -1,0 +1,18 @@
+name: BoxAutomation
+options:
+  deploymentTarget:
+    iOS: "13.0"
+settings:
+  base:
+    SWIFT_VERSION: 5.0
+targets:
+  BoxAutomation:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.boxautomation
+        CODE_SIGN_STYLE: Manual
+        CODE_SIGNING_ALLOWED: NO
