@@ -10,7 +10,7 @@ targets:
     type: application
     platform: iOS
     sources:
-      - path: Sources
+      - path: source  
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.example.boxautomation
